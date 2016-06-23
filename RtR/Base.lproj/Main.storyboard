@@ -122,7 +122,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn0-NR-qgj">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn0-NR-qgj">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBN-qm-HFi">
@@ -247,9 +247,11 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pcf-lk-6k3" secondAttribute="trailing" constant="20" id="5ie-zj-Vlm"/>
                                     <constraint firstItem="pcf-lk-6k3" firstAttribute="top" secondItem="T6l-zY-XST" secondAttribute="bottom" constant="3" id="9sM-1R-m2L"/>
                                     <constraint firstItem="HBN-qm-HFi" firstAttribute="centerX" secondItem="Nn0-NR-qgj" secondAttribute="centerX" id="ENS-2H-BVg"/>
                                     <constraint firstItem="T6l-zY-XST" firstAttribute="centerX" secondItem="Nn0-NR-qgj" secondAttribute="centerX" id="FAH-5w-FeY"/>
+                                    <constraint firstItem="pcf-lk-6k3" firstAttribute="leading" secondItem="Nn0-NR-qgj" secondAttribute="leading" constant="20" id="MtX-qO-Cat"/>
                                     <constraint firstItem="T6l-zY-XST" firstAttribute="top" secondItem="Xt1-hO-z8u" secondAttribute="bottom" constant="8" id="Wq7-ks-fL9"/>
                                     <constraint firstItem="pcf-lk-6k3" firstAttribute="centerX" secondItem="Nn0-NR-qgj" secondAttribute="centerX" id="dub-3c-vg6"/>
                                     <constraint firstAttribute="bottom" secondItem="pcf-lk-6k3" secondAttribute="bottom" id="leg-vs-U2h"/>

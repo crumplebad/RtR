@@ -11,6 +11,7 @@
 		69372C171D1AFE91002ADC26 /* Designers.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C161D1AFE91002ADC26 /* Designers.m */; };
 		69372C1A1D1B0A2D002ADC26 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C191D1B0A2D002ADC26 /* Util.m */; };
 		69372C1F1D1B329B002ADC26 /* AppDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C1E1D1B329B002ADC26 /* AppDependency.m */; };
+		695953C31D1C8693000F3317 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695953C21D1C8693000F3317 /* Realm.framework */; };
 		696783C71D18B2CC00E6879E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783C61D18B2CC00E6879E /* main.m */; };
 		696783CA1D18B2CC00E6879E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783C91D18B2CC00E6879E /* AppDelegate.m */; };
 		696783CD1D18B2CC00E6879E /* DesignersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783CC1D18B2CC00E6879E /* DesignersListViewController.m */; };
@@ -65,6 +66,7 @@
 		69372C1C1D1B2FBC002ADC26 /* DesignersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignersView.h; sourceTree = "<group>"; };
 		69372C1D1D1B329B002ADC26 /* AppDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDependency.h; sourceTree = "<group>"; };
 		69372C1E1D1B329B002ADC26 /* AppDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDependency.m; sourceTree = "<group>"; };
+		695953C21D1C8693000F3317 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		696783C21D18B2CC00E6879E /* RtR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RtR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696783C61D18B2CC00E6879E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		696783C81D18B2CC00E6879E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695953C31D1C8693000F3317 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +145,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		695953C41D1C86A1000F3317 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				695953C21D1C8693000F3317 /* Realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		696783B91D18B2CC00E6879E = {
 			isa = PBXGroup;
 			children = (
+				695953C41D1C86A1000F3317 /* Frameworks */,
 				696783C41D18B2CC00E6879E /* RtR */,
 				696783DE1D18B2CC00E6879E /* RtRTests */,
 				696783E91D18B2CC00E6879E /* RtRUITests */,
@@ -621,6 +633,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RtR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jay.RtR;
@@ -632,6 +648,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RtR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jay.RtR;

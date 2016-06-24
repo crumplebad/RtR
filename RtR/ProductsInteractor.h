@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ProductsInteractorIO.h"
+@class ProductsDataManager;
 
-@interface ProductsInteractor : NSObject
+@interface ProductsInteractor : NSObject<ProductsInteractorInput>
+
+@property (nonatomic, weak) id<ProductsInteractorOutput> output;
+@property (nonatomic, strong) ProductsDataManager *dataManager;
+
+- (ProductsInteractor *)initWithDataManager:(ProductsDataManager *)manager;
 
 @end

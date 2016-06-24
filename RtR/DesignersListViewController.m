@@ -6,9 +6,10 @@
 //  Copyright © 2016 jay. All rights reserved.
 //
 
+#import <Realm/Realm.h>
 #import "DesignersListViewController.h"
 #import "ProductListViewController.h"
-#import "DesignersProductsDataManager.h"
+#import "SharedDataManager.h"
 #import "Model.h"
 #import "Util.h"
 #import "AppDependency.h"
@@ -28,6 +29,8 @@
     [self.presenter loadDesignersData];
     self.tableView.delegate = _presenter;
     self.tableView.dataSource = _presenter;
+    
+    NSLog(@"Realm path: %@", [RLMRealmConfiguration defaultConfiguration].fileURL);
 }
 
 - (void)viewWillAppear:(BOOL)animated {

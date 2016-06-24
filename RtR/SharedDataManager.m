@@ -6,8 +6,11 @@
 //  Copyright © 2016 jay. All rights reserved.
 //
 
-#import "DesignersProductsDataManager.h"
+#import <Realm/Realm.h>
+#import "SharedDataManager.h"
 #import "Model.h"
+#import "Designer.h"
+#import "Products.h"
 #import "Designers.h"
 #import "NSDictionary+RtR.h"
 
@@ -15,7 +18,7 @@ NSString *const kDressDesignerUrl = @"http://static.sqvr.co/designer-dresses.jso
 NSString *const kAccessoryDesignerUrl = @"http://static.sqvr.co/designer-accesories.json";
 NSString *const kProductUrl = @"http://static.sqvr.co/random-items.json";
 
-@implementation DesignersProductsDataManager
+@implementation SharedDataManager
 
 
 - (void)getData:(void(^)(NSError *))completionBlock {
@@ -74,6 +77,43 @@ NSString *const kProductUrl = @"http://static.sqvr.co/random-items.json";
             completionBlock(error);
         }
     });
+}
+
+
+- (void)addFavoriteDesigner:(Designer *)designer {
+#pragma TODO figure out why DB update in the bg causes crash later in the app
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        
+        @try {
+            [realm beginWriteTransaction];
+            [realm addObject:designer];
+            [realm commitWriteTransaction];
+            NSLog(@"Fav added to DB!");
+                    } @catch (NSException *exception) {
+            NSLog(@"Exception while adding favorite");//reverse the model change.
+        } @finally {
+            
+        }
+//    });
+}
+
+- (void)removeFavoriteDesigner:(Designer *)designer {
+#pragma TODO figure out why DB update in the bg causes crash later in the app
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        RLMResults *otherResults = [Designer objectsInRealm:realm where:[NSString stringWithFormat:@"designerName = '%@'",designer.designerName]];
+        @try {
+            [realm beginWriteTransaction];
+            [realm deleteObjects:otherResults];
+            [realm commitWriteTransaction];
+            NSLog(@"Fav removed from DB!");
+        } @catch (NSException *exception) {
+            NSLog(@"Exception while removing favorite");//reverse the model change.
+        } @finally {
+            
+        }
+//    });
 }
 
 @end

@@ -9,17 +9,20 @@
 #import "DesignersInteractor.h"
 #import "Model.h"
 #import "Designer.h"
+#import "Designers.h"
+#import "Product.h"
+#import "Products.h"
+#import "SharedDataManager.h"
 
 @implementation DesignersInteractor
 
-- (DesignersInteractor *)initWithDataManager:(DesignersProductsDataManager *)manager {
+- (DesignersInteractor *)initWithDataManager:(SharedDataManager *)manager {
     if (self = [super init]) {
         _dataManager = manager;
     }
     
     return self;
 }
-
 
 - (void)getAllData {
     __weak typeof(self) welf = self;
@@ -29,7 +32,6 @@
             [welf.output returnDesignersData: [welf getPreparedDataForDisplay]];
         }
     }];
-
 }
 
 - (NSArray *)getPreparedDataForDisplay {
@@ -45,6 +47,7 @@
     return [designerArray copy];
     
 }
+
 - (NSArray *)sortArrayByDesigners:(NSMutableArray *)designersArray {
     NSArray *sortedArray;
     sortedArray = [designersArray sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
@@ -55,8 +58,6 @@
     
     return sortedArray;
 }
-
-
 
 - (NSArray *)mapNumberOfProductsToDesigners:(NSMutableArray *)designersArray{
  
@@ -71,6 +72,14 @@
     }
     
     return [designersArray copy];
+}
+
+- (void)addFavoriteDesigner:(Designer *)designer {
+    [_dataManager addFavoriteDesigner:designer];
+}
+
+- (void)removeFavoriteDesigner:(Designer *)designer {
+    [_dataManager removeFavoriteDesigner:designer];
 }
 
 @end

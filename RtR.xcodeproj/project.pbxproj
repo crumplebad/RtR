@@ -11,7 +11,9 @@
 		69372C171D1AFE91002ADC26 /* Designers.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C161D1AFE91002ADC26 /* Designers.m */; };
 		69372C1A1D1B0A2D002ADC26 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C191D1B0A2D002ADC26 /* Util.m */; };
 		69372C1F1D1B329B002ADC26 /* AppDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C1E1D1B329B002ADC26 /* AppDependency.m */; };
-		695953C31D1C8693000F3317 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695953C21D1C8693000F3317 /* Realm.framework */; };
+		6949CE4E1D1C9BB700AE7095 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6949CE4C1D1C9BB700AE7095 /* Realm.framework */; };
+		6949CE511D1C9C7D00AE7095 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6949CE4C1D1C9BB700AE7095 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6949CE571D1CB32600AE7095 /* ProductsDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6949CE561D1CB32600AE7095 /* ProductsDataManager.m */; };
 		696783C71D18B2CC00E6879E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783C61D18B2CC00E6879E /* main.m */; };
 		696783CA1D18B2CC00E6879E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783C91D18B2CC00E6879E /* AppDelegate.m */; };
 		696783CD1D18B2CC00E6879E /* DesignersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783CC1D18B2CC00E6879E /* DesignersListViewController.m */; };
@@ -33,7 +35,7 @@
 		69B4F9071D19E86300AEF2D2 /* Designer.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4F9061D19E86300AEF2D2 /* Designer.m */; };
 		69B4F90A1D19F48F00AEF2D2 /* DesignersPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4F9091D19F48F00AEF2D2 /* DesignersPresenter.m */; };
 		69B4F90D1D19F4A600AEF2D2 /* DesignersInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4F90C1D19F4A600AEF2D2 /* DesignersInteractor.m */; };
-		69B4F9101D19F4D700AEF2D2 /* DesignersProductsDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4F90F1D19F4D700AEF2D2 /* DesignersProductsDataManager.m */; };
+		69B4F9101D19F4D700AEF2D2 /* SharedDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4F90F1D19F4D700AEF2D2 /* SharedDataManager.m */; };
 		69B4F9151D19F51600AEF2D2 /* ProductsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4F9141D19F51600AEF2D2 /* ProductsPresenter.m */; };
 		69B4F9181D19F52C00AEF2D2 /* ProductsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B4F9171D19F52C00AEF2D2 /* ProductsInteractor.m */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6949CE541D1C9C7E00AE7095 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6949CE511D1C9C7D00AE7095 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		69372C121D1AFE81002ADC26 /* Products.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Products.h; sourceTree = "<group>"; };
 		69372C131D1AFE81002ADC26 /* Products.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Products.m; sourceTree = "<group>"; };
@@ -66,7 +82,11 @@
 		69372C1C1D1B2FBC002ADC26 /* DesignersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignersView.h; sourceTree = "<group>"; };
 		69372C1D1D1B329B002ADC26 /* AppDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDependency.h; sourceTree = "<group>"; };
 		69372C1E1D1B329B002ADC26 /* AppDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDependency.m; sourceTree = "<group>"; };
-		695953C21D1C8693000F3317 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		6949CE441D1C901800AE7095 /* ProductsInteractorIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsInteractorIO.h; sourceTree = "<group>"; };
+		6949CE471D1C903B00AE7095 /* ProductsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductsView.h; sourceTree = "<group>"; };
+		6949CE4C1D1C9BB700AE7095 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		6949CE551D1CB32600AE7095 /* ProductsDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsDataManager.h; sourceTree = "<group>"; };
+		6949CE561D1CB32600AE7095 /* ProductsDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsDataManager.m; sourceTree = "<group>"; };
 		696783C21D18B2CC00E6879E /* RtR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RtR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696783C61D18B2CC00E6879E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		696783C81D18B2CC00E6879E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,7 +121,7 @@
 		69B1B4921D1C3ACE00306117 /* DetailInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInteractor.m; sourceTree = "<group>"; };
 		69B1B4941D1C3AD900306117 /* DetailInteractorIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInteractorIO.h; sourceTree = "<group>"; };
 		69B1B4971D1C3AF700306117 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
-		69B1B49A1D1C435200306117 /* DesignersProductsDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignersProductsDataManager.h; sourceTree = "<group>"; };
+		69B1B49A1D1C435200306117 /* SharedDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedDataManager.h; sourceTree = "<group>"; };
 		69B1B49B1D1C45DC00306117 /* DetailDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailDataManager.h; sourceTree = "<group>"; };
 		69B1B49C1D1C45DC00306117 /* DetailDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailDataManager.m; sourceTree = "<group>"; };
 		69B4F9021D19D82800AEF2D2 /* DesignerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignerTableViewCell.h; sourceTree = "<group>"; };
@@ -112,7 +132,7 @@
 		69B4F9091D19F48F00AEF2D2 /* DesignersPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignersPresenter.m; sourceTree = "<group>"; };
 		69B4F90B1D19F4A600AEF2D2 /* DesignersInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignersInteractor.h; sourceTree = "<group>"; };
 		69B4F90C1D19F4A600AEF2D2 /* DesignersInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignersInteractor.m; sourceTree = "<group>"; };
-		69B4F90F1D19F4D700AEF2D2 /* DesignersProductsDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignersProductsDataManager.m; sourceTree = "<group>"; };
+		69B4F90F1D19F4D700AEF2D2 /* SharedDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedDataManager.m; sourceTree = "<group>"; };
 		69B4F9131D19F51600AEF2D2 /* ProductsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsPresenter.h; sourceTree = "<group>"; };
 		69B4F9141D19F51600AEF2D2 /* ProductsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsPresenter.m; sourceTree = "<group>"; };
 		69B4F9161D19F52C00AEF2D2 /* ProductsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsInteractor.h; sourceTree = "<group>"; };
@@ -124,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				695953C31D1C8693000F3317 /* Realm.framework in Frameworks */,
+				6949CE4E1D1C9BB700AE7095 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +168,7 @@
 		695953C41D1C86A1000F3317 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				695953C21D1C8693000F3317 /* Realm.framework */,
+				6949CE4C1D1C9BB700AE7095 /* Realm.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,6 +272,8 @@
 				696783CC1D18B2CC00E6879E /* DesignersListViewController.m */,
 				69B4F9081D19F48F00AEF2D2 /* DesignersPresenter.h */,
 				69B4F9091D19F48F00AEF2D2 /* DesignersPresenter.m */,
+				69B1B49A1D1C435200306117 /* SharedDataManager.h */,
+				69B4F90F1D19F4D700AEF2D2 /* SharedDataManager.m */,
 				69372C1C1D1B2FBC002ADC26 /* DesignersView.h */,
 			);
 			name = DesignersScreen;
@@ -260,12 +282,16 @@
 		69B4F9121D19F50200AEF2D2 /* ProductsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				6949CE471D1C903B00AE7095 /* ProductsView.h */,
 				696784021D18B44200E6879E /* ProductListViewController.h */,
 				696784031D18B44200E6879E /* ProductListViewController.m */,
 				69B4F9131D19F51600AEF2D2 /* ProductsPresenter.h */,
 				69B4F9141D19F51600AEF2D2 /* ProductsPresenter.m */,
 				69B4F9161D19F52C00AEF2D2 /* ProductsInteractor.h */,
 				69B4F9171D19F52C00AEF2D2 /* ProductsInteractor.m */,
+				6949CE441D1C901800AE7095 /* ProductsInteractorIO.h */,
+				6949CE551D1CB32600AE7095 /* ProductsDataManager.h */,
+				6949CE561D1CB32600AE7095 /* ProductsDataManager.m */,
 			);
 			name = ProductsScreen;
 			sourceTree = "<group>";
@@ -332,8 +358,6 @@
 		69B4F91E1D19F5D700AEF2D2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				69B1B49A1D1C435200306117 /* DesignersProductsDataManager.h */,
-				69B4F90F1D19F4D700AEF2D2 /* DesignersProductsDataManager.m */,
 				696783FA1D18B44200E6879E /* Model.h */,
 				696783FB1D18B44200E6879E /* Model.m */,
 			);
@@ -350,6 +374,7 @@
 				696783BE1D18B2CC00E6879E /* Sources */,
 				696783BF1D18B2CC00E6879E /* Frameworks */,
 				696783C01D18B2CC00E6879E /* Resources */,
+				6949CE541D1C9C7E00AE7095 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -483,10 +508,11 @@
 				696784081D18B44200E6879E /* Product.m in Sources */,
 				69B4F9041D19D82800AEF2D2 /* DesignerTableViewCell.m in Sources */,
 				696784091D18B44200E6879E /* ProductListViewController.m in Sources */,
-				69B4F9101D19F4D700AEF2D2 /* DesignersProductsDataManager.m in Sources */,
+				69B4F9101D19F4D700AEF2D2 /* SharedDataManager.m in Sources */,
 				69B4F90D1D19F4A600AEF2D2 /* DesignersInteractor.m in Sources */,
 				696784061D18B44200E6879E /* NetworkService.m in Sources */,
 				696784051D18B44200E6879E /* Model.m in Sources */,
+				6949CE571D1CB32600AE7095 /* ProductsDataManager.m in Sources */,
 				69B4F9181D19F52C00AEF2D2 /* ProductsInteractor.m in Sources */,
 				69372C171D1AFE91002ADC26 /* Designers.m in Sources */,
 				69B1B49D1D1C45DC00306117 /* DetailDataManager.m in Sources */,

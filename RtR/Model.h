@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Designers.h"
-#import "Products.h"
+@class Designers;
+@class Products;
 
 @interface Model : NSObject
 

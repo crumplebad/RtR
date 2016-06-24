@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
 
-@interface Designer : NSObject
+@interface Designer : RLMObject
 
 @property (nonatomic, strong) NSString *designerName;
 @property (nonatomic) NSUInteger numberOfProducts;

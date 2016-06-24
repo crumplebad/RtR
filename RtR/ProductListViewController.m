@@ -11,9 +11,11 @@
 #import "Product.h"
 #import "Designer.h"
 #import "Model.h"
+#import "AppDependency.h"
+#import "ProductsPresenter.h"
 
 @interface ProductListViewController (){
-    NSMutableArray *gProductsArray;
+
     Designer *gDesigner;
 }
 @end
@@ -22,9 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [AppDependency configureDependencyForProducts:self];
     [self setTitle:gDesigner.designerName];
-    gProductsArray = [[[[Model sharedinstance] products] value] objectForKey:gDesigner.designerName];
+    [self.presenter loadProductsForDesigner:gDesigner.designerName];
 }
 
 - (void)setDesigner:(Designer *)designer {
@@ -39,26 +41,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showProductDetail"]) {
+        Product *aProduct = [self.presenter getProductAtIndex:[self.tableView indexPathForSelectedRow]];
         DetailViewController *controller = (DetailViewController *)[segue destinationViewController];
-        [controller setProduct:gProductsArray[[self.tableView indexPathForSelectedRow].row]];
+        [controller setProduct:aProduct];
     }
-}
-
-#pragma mark - Table View
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [gProductsArray count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProductCell" forIndexPath:indexPath];
-    cell.textLabel.text = [(Product *)gProductsArray[indexPath.row] displayName];
-    
-    return cell;
 }
 
 @end

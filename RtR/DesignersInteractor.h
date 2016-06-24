@@ -8,13 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "DesignersInteractorIO.h"
-#import "DesignersProductsDataManager.h"
+
+@class SharedDataManager;
+@class Designer;
 
 @interface DesignersInteractor : NSObject<DesignersInteractorInput>
 
 @property (nonatomic, weak) id<DesignersInteractorOutput> output;
-@property (nonatomic, strong) DesignersProductsDataManager *dataManager;
+@property (nonatomic, strong) SharedDataManager *dataManager;
 
-- (DesignersInteractor *)initWithDataManager:(DesignersProductsDataManager *)manager;
+- (void)addFavoriteDesigner:(Designer *)designer;
+- (void)removeFavoriteDesigner:(Designer *)designer;
+
+- (DesignersInteractor *)initWithDataManager:(SharedDataManager *)manager;
 
 @end

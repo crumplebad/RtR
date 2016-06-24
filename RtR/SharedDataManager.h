@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DesignersProductsDataManager : NSObject
+@class Designer;
+
+@interface SharedDataManager : NSObject
 
 @property (nonatomic, strong) NSArray *value;
 
 - (void)getData:(void(^)(NSError *))completionBlock;
+
+- (void)addFavoriteDesigner:(Designer *)esigner;
+- (void)removeFavoriteDesigner:(Designer *)designer;
 
 @end

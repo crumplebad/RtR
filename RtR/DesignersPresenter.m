@@ -9,6 +9,7 @@
 #import "DesignersPresenter.h"
 #import "Designer.h"
 #import "DesignersListViewController.h"
+#import "DesignersInteractor.h"
 
 @implementation DesignersPresenter {
     NSArray *gDesignerArray;
@@ -51,18 +52,16 @@
 }
 
 - (void)toggleFavorite:(DesignerTableViewCell *)cell {
-//    CGPoint buttonPosition = [cell.favBtn convertPoint:CGPointZero toView:[(DesignersListViewController *)_view tableView]];
-//    NSIndexPath *indexPath = [[(DesignersListViewController *)_view tableView] indexPathForRowAtPoint:buttonPosition];
-//OR
     NSIndexPath *indexPath = [[(DesignersListViewController *)_view tableView] indexPathForCell:cell];
-    
     if (indexPath != nil)
     {
         Designer *aDesigner = gDesignerArray[indexPath.row];
         if (cell.favBtn.tag == 0) {
             aDesigner.isFavorite = NO;//remove from favorite table
+            [(DesignersInteractor *)self.input removeFavoriteDesigner:aDesigner];
         } else {
             aDesigner.isFavorite = YES;//add to favorite table
+            [(DesignersInteractor *)self.input addFavoriteDesigner:aDesigner];
         }
     }
 }

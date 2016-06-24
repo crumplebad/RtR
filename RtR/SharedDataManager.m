@@ -82,38 +82,37 @@ NSString *const kProductUrl = @"http://static.sqvr.co/random-items.json";
 
 - (void)addFavoriteDesigner:(Designer *)designer {
 #pragma TODO figure out why DB update in the bg causes crash later in the app
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         RLMRealm *realm = [RLMRealm defaultRealm];
-        
+        Designer *newDesigner = [Designer new];
+        newDesigner.designerName = designer.designerName;
         @try {
             [realm beginWriteTransaction];
-            [realm addObject:designer];
+            [realm addObject:newDesigner];
             [realm commitWriteTransaction];
-            NSLog(@"Fav added to DB!");
                     } @catch (NSException *exception) {
             NSLog(@"Exception while adding favorite");//reverse the model change.
         } @finally {
             
         }
-//    });
+    });
 }
 
 - (void)removeFavoriteDesigner:(Designer *)designer {
 #pragma TODO figure out why DB update in the bg causes crash later in the app
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         RLMRealm *realm = [RLMRealm defaultRealm];
         RLMResults *otherResults = [Designer objectsInRealm:realm where:[NSString stringWithFormat:@"designerName = '%@'",designer.designerName]];
         @try {
             [realm beginWriteTransaction];
             [realm deleteObjects:otherResults];
             [realm commitWriteTransaction];
-            NSLog(@"Fav removed from DB!");
         } @catch (NSException *exception) {
             NSLog(@"Exception while removing favorite");//reverse the model change.
         } @finally {
             
         }
-//    });
+    });
 }
 
 @end

@@ -57,10 +57,10 @@
     {
         Designer *aDesigner = gDesignerArray[indexPath.row];
         if (cell.favBtn.tag == 0) {
-            aDesigner.isFavorite = NO;//remove from favorite table
+            aDesigner.isFavorite = NO;
             [(DesignersInteractor *)self.input removeFavoriteDesigner:aDesigner];
         } else {
-            aDesigner.isFavorite = YES;//add to favorite table
+            aDesigner.isFavorite = YES;
             [(DesignersInteractor *)self.input addFavoriteDesigner:aDesigner];
         }
     }

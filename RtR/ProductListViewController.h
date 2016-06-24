@@ -10,7 +10,6 @@
 #import "ProductsView.h"
 
 @class Designer;
-
 @class ProductsPresenter;
 
 @interface ProductListViewController : UITableViewController<ProductsView>

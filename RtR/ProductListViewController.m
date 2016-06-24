@@ -26,6 +26,8 @@
     [super viewDidLoad];
     [AppDependency configureDependencyForProducts:self];
     [self setTitle:gDesigner.designerName];
+    self.tableView.delegate = self.presenter;
+    self.tableView.dataSource = self.presenter;
     [self.presenter loadProductsForDesigner:gDesigner.designerName];
 }
 

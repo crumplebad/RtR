@@ -8,6 +8,7 @@
 
 #import "ProductsPresenter.h"
 #import "Product.h"
+#import "ProductListViewController.h"
 
 @implementation ProductsPresenter {
     NSMutableArray *gProductsArray;
@@ -20,6 +21,7 @@
 
 - (void)returnAllProducts:(NSMutableArray *)productsArray {
     gProductsArray = productsArray;
+    [[(ProductListViewController *)self.view tableView] reloadData];
 }
 
 - (Product *)getProductAtIndex:(NSIndexPath *)indexpath {

@@ -95,10 +95,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="aec-ui-DoT" id="XPk-XF-UPr"/>
-                            <outlet property="delegate" destination="aec-ui-DoT" id="H8o-r9-mNM"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Products" id="DVJ-tW-PTF">
                         <barButtonItem key="backBarButtonItem" title="Products" id="EhG-j8-jBL">

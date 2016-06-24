@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69009D691D1D87A30049D532 /* DesignersDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69009D681D1D87A30049D532 /* DesignersDataTests.m */; };
+		69009D6B1D1D87B20049D532 /* ProductsDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69009D6A1D1D87B20049D532 /* ProductsDataTests.m */; };
 		69372C141D1AFE81002ADC26 /* Products.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C131D1AFE81002ADC26 /* Products.m */; };
 		69372C171D1AFE91002ADC26 /* Designers.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C161D1AFE91002ADC26 /* Designers.m */; };
 		69372C1A1D1B0A2D002ADC26 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C191D1B0A2D002ADC26 /* Util.m */; };
@@ -20,8 +22,6 @@
 		696783D01D18B2CC00E6879E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696783CE1D18B2CC00E6879E /* Main.storyboard */; };
 		696783D21D18B2CC00E6879E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696783D11D18B2CC00E6879E /* Assets.xcassets */; };
 		696783D51D18B2CC00E6879E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696783D31D18B2CC00E6879E /* LaunchScreen.storyboard */; };
-		696783E01D18B2CC00E6879E /* RtRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783DF1D18B2CC00E6879E /* RtRTests.m */; };
-		696783EB1D18B2CC00E6879E /* RtRUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783EA1D18B2CC00E6879E /* RtRUITests.m */; };
 		696784041D18B44200E6879E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783F91D18B44200E6879E /* DetailViewController.m */; };
 		696784051D18B44200E6879E /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783FB1D18B44200E6879E /* Model.m */; };
 		696784061D18B44200E6879E /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783FD1D18B44200E6879E /* NetworkService.m */; };
@@ -48,13 +48,6 @@
 			remoteGlobalIDString = 696783C11D18B2CC00E6879E;
 			remoteInfo = RtR;
 		};
-		696783E71D18B2CC00E6879E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 696783BA1D18B2CC00E6879E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 696783C11D18B2CC00E6879E;
-			remoteInfo = RtR;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		69009D681D1D87A30049D532 /* DesignersDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignersDataTests.m; sourceTree = "<group>"; };
+		69009D6A1D1D87B20049D532 /* ProductsDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsDataTests.m; sourceTree = "<group>"; };
 		69372C121D1AFE81002ADC26 /* Products.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Products.h; sourceTree = "<group>"; };
 		69372C131D1AFE81002ADC26 /* Products.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Products.m; sourceTree = "<group>"; };
 		69372C151D1AFE91002ADC26 /* Designers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Designers.h; sourceTree = "<group>"; };
@@ -98,11 +93,7 @@
 		696783D41D18B2CC00E6879E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		696783D61D18B2CC00E6879E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		696783DB1D18B2CC00E6879E /* RtRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RtRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		696783DF1D18B2CC00E6879E /* RtRTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RtRTests.m; sourceTree = "<group>"; };
 		696783E11D18B2CC00E6879E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		696783E61D18B2CC00E6879E /* RtRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RtRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		696783EA1D18B2CC00E6879E /* RtRUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RtRUITests.m; sourceTree = "<group>"; };
-		696783EC1D18B2CC00E6879E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		696783F81D18B44200E6879E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		696783F91D18B44200E6879E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		696783FA1D18B44200E6879E /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
@@ -155,13 +146,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		696783E31D18B2CC00E6879E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -179,7 +163,6 @@
 				695953C41D1C86A1000F3317 /* Frameworks */,
 				696783C41D18B2CC00E6879E /* RtR */,
 				696783DE1D18B2CC00E6879E /* RtRTests */,
-				696783E91D18B2CC00E6879E /* RtRUITests */,
 				696783C31D18B2CC00E6879E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -189,7 +172,6 @@
 			children = (
 				696783C21D18B2CC00E6879E /* RtR.app */,
 				696783DB1D18B2CC00E6879E /* RtRTests.xctest */,
-				696783E61D18B2CC00E6879E /* RtRUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,19 +207,11 @@
 		696783DE1D18B2CC00E6879E /* RtRTests */ = {
 			isa = PBXGroup;
 			children = (
-				696783DF1D18B2CC00E6879E /* RtRTests.m */,
+				69009D681D1D87A30049D532 /* DesignersDataTests.m */,
+				69009D6A1D1D87B20049D532 /* ProductsDataTests.m */,
 				696783E11D18B2CC00E6879E /* Info.plist */,
 			);
 			path = RtRTests;
-			sourceTree = "<group>";
-		};
-		696783E91D18B2CC00E6879E /* RtRUITests */ = {
-			isa = PBXGroup;
-			children = (
-				696783EA1D18B2CC00E6879E /* RtRUITests.m */,
-				696783EC1D18B2CC00E6879E /* Info.plist */,
-			);
-			path = RtRUITests;
 			sourceTree = "<group>";
 		};
 		69B1B49E1D1C64D200306117 /* Common */ = {
@@ -403,24 +377,6 @@
 			productReference = 696783DB1D18B2CC00E6879E /* RtRTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		696783E51D18B2CC00E6879E /* RtRUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 696783F51D18B2CD00E6879E /* Build configuration list for PBXNativeTarget "RtRUITests" */;
-			buildPhases = (
-				696783E21D18B2CC00E6879E /* Sources */,
-				696783E31D18B2CC00E6879E /* Frameworks */,
-				696783E41D18B2CC00E6879E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				696783E81D18B2CC00E6879E /* PBXTargetDependency */,
-			);
-			name = RtRUITests;
-			productName = RtRUITests;
-			productReference = 696783E61D18B2CC00E6879E /* RtRUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -434,10 +390,6 @@
 						CreatedOnToolsVersion = 7.3.1;
 					};
 					696783DA1D18B2CC00E6879E = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 696783C11D18B2CC00E6879E;
-					};
-					696783E51D18B2CC00E6879E = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 696783C11D18B2CC00E6879E;
 					};
@@ -458,7 +410,6 @@
 			targets = (
 				696783C11D18B2CC00E6879E /* RtR */,
 				696783DA1D18B2CC00E6879E /* RtRTests */,
-				696783E51D18B2CC00E6879E /* RtRUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -475,13 +426,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		696783D91D18B2CC00E6879E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		696783E41D18B2CC00E6879E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,15 +470,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				696783E01D18B2CC00E6879E /* RtRTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		696783E21D18B2CC00E6879E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				696783EB1D18B2CC00E6879E /* RtRUITests.m in Sources */,
+				69009D691D1D87A30049D532 /* DesignersDataTests.m in Sources */,
+				69009D6B1D1D87B20049D532 /* ProductsDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,11 +482,6 @@
 			isa = PBXTargetDependency;
 			target = 696783C11D18B2CC00E6879E /* RtR */;
 			targetProxy = 696783DC1D18B2CC00E6879E /* PBXContainerItemProxy */;
-		};
-		696783E81D18B2CC00E6879E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 696783C11D18B2CC00E6879E /* RtR */;
-			targetProxy = 696783E71D18B2CC00E6879E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -709,28 +641,6 @@
 			};
 			name = Release;
 		};
-		696783F61D18B2CD00E6879E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RtRUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jay.RtRUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = RtR;
-			};
-			name = Debug;
-		};
-		696783F71D18B2CD00E6879E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RtRUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jay.RtRUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = RtR;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -757,15 +667,6 @@
 			buildConfigurations = (
 				696783F31D18B2CD00E6879E /* Debug */,
 				696783F41D18B2CD00E6879E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		696783F51D18B2CD00E6879E /* Build configuration list for PBXNativeTarget "RtRUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				696783F61D18B2CD00E6879E /* Debug */,
-				696783F71D18B2CD00E6879E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -85,7 +85,7 @@
             
         }
 //        then
-        XCTAssertTrue([results count] == 0, @"Result count should be 1.");
+        XCTAssertTrue([results count] == 0, @"Result count should be 0.");
     }];
 }
 

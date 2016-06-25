@@ -33,14 +33,14 @@ RtR uses a number of open source projects namely:
 * [ Dillinger] - Online Mark Down editor to prepare ReadMe.md
 
 ### Installation/Run
-RtR use iOS 9.3 SDK and Xcode 7.3 (Xcode 7.3.1 had issues launching Simulator on macOS Sierra)
-You need to install Carthage before compiling RtR
+RtR uses iOS 9.3 SDK and Xcode 7.3 (Xcode 7.3.1 has issues launching Simulator on macOS Sierra)
+Install Carthage before compiling RtR
 
 ```sh
 $ cd <to project folder>
 $ carthage update --platform iOS
 ```
-I used Carthage instead of CocoaPods for the simplicity and ease of use. Its very easy to replace Carthage by other dependency managers, unlike CocoaPods .
+RtR uses Carthage instead of CocoaPods for the simplicity and ease of use. Its very easy to replace Carthage by other dependency managers, unlike CocoaPods .
 
 
 [Realm]: <https://realm.io>

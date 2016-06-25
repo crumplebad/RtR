@@ -17,9 +17,9 @@
 + (BOOL)isDesignerFavorite:(NSString *)designer {
     
     RLMRealm *realm = [RLMRealm defaultRealm];
-    RLMResults *otherResults;
+    RLMResults *results;
     @try {
-        otherResults = [Designer objectsInRealm:realm where:[NSString stringWithFormat:@"designerName = '%@'",designer]];
+        results = [Designer objectsInRealm:realm where:[NSString stringWithFormat:@"designerName = '%@'",designer]];
     } @catch (NSException *exception) {
         NSLog(@"Realm EXCEPTION while reading.");
         return NO;
@@ -27,7 +27,7 @@
 
     }
     
-    return (otherResults.count >0)? YES:NO;
+    return (results.count >0)? YES:NO;
 }
 
 @end

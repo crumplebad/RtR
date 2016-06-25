@@ -16,7 +16,7 @@
 
 - (void)getData:(void(^)(NSError *))completionBlock;
 
-- (void)addFavoriteDesigner:(Designer *)esigner;
-- (void)removeFavoriteDesigner:(Designer *)designer;
+- (void)addFavoriteDesigner:(Designer *)designer withCompletionHandler:(void(^)(void))completionBlock;
+- (void)removeFavoriteDesigner:(Designer *)designer  withCompletionHandler:(void(^)(void))completionBlock;
 
 @end

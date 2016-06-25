@@ -75,11 +75,11 @@
 }
 
 - (void)addFavoriteDesigner:(Designer *)designer {
-    [_dataManager addFavoriteDesigner:designer];
+    [_dataManager addFavoriteDesigner:designer withCompletionHandler:nil];
 }
 
 - (void)removeFavoriteDesigner:(Designer *)designer {
-    [_dataManager removeFavoriteDesigner:designer];
+    [_dataManager removeFavoriteDesigner:designer withCompletionHandler:nil];
 }
 
 @end

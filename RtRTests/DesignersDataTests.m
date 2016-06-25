@@ -32,7 +32,7 @@
 
 - (void)testDressDesignerDataIsFetchedAndParsed {
 
-    XCTestExpectation *fetchParseData = [self expectationWithDescription:@"downlofetchad and parse data"];
+    XCTestExpectation *fetchParseData = [self expectationWithDescription:@"fetch and parse data"];
     [gSharedDataManager getData:^(NSError *error){
         if (!error) {
             XCTAssertTrue([[[[Model sharedinstance] dressDesigners] value] count] > 0, @"Should be more than zero");

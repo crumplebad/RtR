@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		69009D691D1D87A30049D532 /* DesignersDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69009D681D1D87A30049D532 /* DesignersDataTests.m */; };
 		69009D6B1D1D87B20049D532 /* ProductsDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69009D6A1D1D87B20049D532 /* ProductsDataTests.m */; };
+		6908B5081D1DC8EF0043FB46 /* DataBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6908B5071D1DC8EF0043FB46 /* DataBaseTests.m */; };
 		69372C141D1AFE81002ADC26 /* Products.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C131D1AFE81002ADC26 /* Products.m */; };
 		69372C171D1AFE91002ADC26 /* Designers.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C161D1AFE91002ADC26 /* Designers.m */; };
 		69372C1A1D1B0A2D002ADC26 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 69372C191D1B0A2D002ADC26 /* Util.m */; };
@@ -28,6 +29,7 @@
 		696784071D18B44200E6879E /* NSDictionary+RtR.m in Sources */ = {isa = PBXBuildFile; fileRef = 696783FF1D18B44200E6879E /* NSDictionary+RtR.m */; };
 		696784081D18B44200E6879E /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 696784011D18B44200E6879E /* Product.m */; };
 		696784091D18B44200E6879E /* ProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696784031D18B44200E6879E /* ProductListViewController.m */; };
+		69A669381D1E213C005CE42C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6949CE4C1D1C9BB700AE7095 /* Realm.framework */; };
 		69B1B4901D1C3AB900306117 /* DetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B1B48F1D1C3AB900306117 /* DetailPresenter.m */; };
 		69B1B4931D1C3ACE00306117 /* DetailInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B1B4921D1C3ACE00306117 /* DetailInteractor.m */; };
 		69B1B49D1D1C45DC00306117 /* DetailDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B1B49C1D1C45DC00306117 /* DetailDataManager.m */; };
@@ -67,6 +69,7 @@
 /* Begin PBXFileReference section */
 		69009D681D1D87A30049D532 /* DesignersDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignersDataTests.m; sourceTree = "<group>"; };
 		69009D6A1D1D87B20049D532 /* ProductsDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsDataTests.m; sourceTree = "<group>"; };
+		6908B5071D1DC8EF0043FB46 /* DataBaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBaseTests.m; path = ../RtR/DataBaseTests.m; sourceTree = "<group>"; };
 		69372C121D1AFE81002ADC26 /* Products.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Products.h; sourceTree = "<group>"; };
 		69372C131D1AFE81002ADC26 /* Products.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Products.m; sourceTree = "<group>"; };
 		69372C151D1AFE91002ADC26 /* Designers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Designers.h; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A669381D1E213C005CE42C /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +211,7 @@
 		696783DE1D18B2CC00E6879E /* RtRTests */ = {
 			isa = PBXGroup;
 			children = (
+				6908B5071D1DC8EF0043FB46 /* DataBaseTests.m */,
 				69009D681D1D87A30049D532 /* DesignersDataTests.m */,
 				69009D6A1D1D87B20049D532 /* ProductsDataTests.m */,
 				696783E11D18B2CC00E6879E /* Info.plist */,
@@ -470,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6908B5081D1DC8EF0043FB46 /* DataBaseTests.m in Sources */,
 				69009D691D1D87A30049D532 /* DesignersDataTests.m in Sources */,
 				69009D6B1D1D87B20049D532 /* ProductsDataTests.m in Sources */,
 			);
@@ -621,6 +627,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RtRTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jay.RtRTests;
@@ -633,6 +643,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RtRTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jay.RtRTests;

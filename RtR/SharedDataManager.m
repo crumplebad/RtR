@@ -80,8 +80,7 @@ NSString *const kProductUrl = @"http://static.sqvr.co/random-items.json";
 }
 
 
-- (void)addFavoriteDesigner:(Designer *)designer {
-#pragma TODO figure out why DB update in the bg causes crash later in the app
+- (void)addFavoriteDesigner:(Designer *)designer withCompletionHandler:(void(^)(void))completionBlock {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         RLMRealm *realm = [RLMRealm defaultRealm];
         Designer *newDesigner = [Designer new];
@@ -90,7 +89,10 @@ NSString *const kProductUrl = @"http://static.sqvr.co/random-items.json";
             [realm beginWriteTransaction];
             [realm addObject:newDesigner];
             [realm commitWriteTransaction];
-                    } @catch (NSException *exception) {
+            if(completionBlock){
+                completionBlock();
+            }
+        } @catch (NSException *exception) {
             NSLog(@"Exception while adding favorite");//reverse the model change.
         } @finally {
             
@@ -98,15 +100,17 @@ NSString *const kProductUrl = @"http://static.sqvr.co/random-items.json";
     });
 }
 
-- (void)removeFavoriteDesigner:(Designer *)designer {
-#pragma TODO figure out why DB update in the bg causes crash later in the app
+- (void)removeFavoriteDesigner:(Designer *)designer  withCompletionHandler:(void(^)(void))completionBlock {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         RLMRealm *realm = [RLMRealm defaultRealm];
-        RLMResults *otherResults = [Designer objectsInRealm:realm where:[NSString stringWithFormat:@"designerName = '%@'",designer.designerName]];
+        RLMResults *results = [Designer objectsInRealm:realm where:[NSString stringWithFormat:@"designerName = '%@'",designer.designerName]];
         @try {
             [realm beginWriteTransaction];
-            [realm deleteObjects:otherResults];
+            [realm deleteObjects:results];
             [realm commitWriteTransaction];
+            if(completionBlock){
+                completionBlock();
+            }
         } @catch (NSException *exception) {
             NSLog(@"Exception while removing favorite");//reverse the model change.
         } @finally {

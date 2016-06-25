@@ -5,6 +5,7 @@ RentTheRunway(RtR) iOS application does the following
 - merges the list and displays them in an alphabetical order.
 - a product list is also downloaded and the products tied to the respective designers.
 - users can favorite a designer and these favorites are persisted across sessions.
+ 
 ### Architecture
 RtR uses VIPER (View, Interactor, Presenter, Entity, Router) sans Router instead of the much loved and hated MVC (Model View Controller), which results in Massive View Controllers. Use of StoryBoard makes having Router challenging and less relevant. Other modifications to VIPER includes SharedDataManager, which fetches the data from server for both the Designers Scene as well as Products Scene, hence the name SharedDataManager. Products Scene also has a dedicated DataManger, called ProductsDatManager, which fetches the data from the Data Model instead of the web, thus the DataManager abstracts the data source from the view-controller.
 

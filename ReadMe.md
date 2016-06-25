@@ -17,7 +17,7 @@ An array of products returned from the web-service was converted to a NSDictiona
 > Keep improving.
 
 I would like to make following enhancements:
-- improve the pattern to use Realm in multi-threaded environment. Accessing (no simultaneously) Realm objects from multiple  thread causes app to crash.
+- improve the pattern to use Realm in multi-threaded environment. Accessing (no simultaneously) Realm objects from multiple threads cause app to crash.
 - follow TDD to create better code-coverage instead of adding test cases after the development. 
 - add UI testing.
 
